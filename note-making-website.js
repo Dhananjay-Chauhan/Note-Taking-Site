@@ -75,6 +75,7 @@ function deleteNote(index) {
       titleObj = JSON.parse(title);
     }
     notesObj.splice(index, 1);
+    titleObj.splice(index, 1);
     localStorage.setItem("notes", JSON.stringify(notesObj));
     localStorage.setItem("title", JSON.stringify(titleObj));
     showNotes();
